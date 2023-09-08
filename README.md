@@ -1,4 +1,4 @@
-# Udacity-AWS-MLE-ND-Project2-Build-a-ML-Workflow-For-Scones-Unlimited-On-Amazon-SageMaker
+# Build_ML_Workflow_For_Scones_Unlimited_On_Amazon_SageMaker
 The primary objective of this project was to build and deploy an image classification model for Scones Unlimited, a scone-delivery-focused logistic company, using AWS SageMaker.
 
 # Project: 
@@ -7,7 +7,7 @@ The primary objective of this project was to build and deploy an image classific
 
 ## 1. Overview
 
-This project was a part of the project assessment in the **'AWS x Udacity's Machine Learning Engineer Nanodegree Scholarship Program'**.
+This project was a part of the project assessment in the **'Udacity's Machine Learning Engineer Nanodegree Scholarship Program'** provided by **AWS.**
 
 ## 2. Getting Started
 
@@ -42,9 +42,9 @@ The project aims to develop an image classification Machine Learning Model using
 
 ### 3.1. Individual AWS Lambda functions drafted to build an AWS Step Functions Workflow:<br>
 
-1. The `serializeImageData` Lambda Function (https://github.com/JahnnviSingh/Build_a_ML_Workflow_For_Scones_Unlimited_On_Amazon_SageMaker/blob/main/Lambda%20Functions/Lambda1_Steralize_Image_Data.py) takes the address of an image hosted in S3, and returns a serialized JSON object.<br>
-2. The `Image-Classification` Lambda Function ([zipped `lambda_function.py` script](Lambda%20functions%20-%20python%20scripts/Lambda-2-Image-Classification-code.zip)) accepts the JSON object obtained from step 1 and sends it to an endpoint, collecting inferences as a JSON object.<br>
-3. The `Filter Low Confidence Inferences` Lambda Function ([zipped `lambda_function.py` script](Lambda%20functions%20-%20python%20scripts/Lambda-3-Filter-Low-Confidence-Inferences-code.zip)) takes the inference data from step 2, and filters only the images that meet the pre-defined threshold.<br>
+1. The `serializeImageData` Lambda Function (<a href =  "https://github.com/JahnnviSingh/Build_a_ML_Workflow_For_Scones_Unlimited_On_Amazon_SageMaker/blob/main/Lambda%20Functions/Lambda1_Steralize_Image_Data.py"> Lambda1_Steralize_Image_Data.py  </a>) takes the address of an image hosted in S3, and returns a serialized JSON object.<br>
+2. The `Image-Classification` Lambda Function ([Lambda2_Image_Classification.py](Lambda%20Functions/Lambda2_Image_Classification.py)) accepts the JSON object obtained from step 1 and sends it to an endpoint, collecting inferences as a JSON object.<br>
+3. The `Filter Low Confidence Inferences` Lambda Function ([Lambda3_Filter_Low_Confidence_Inferences](Lambda%20Functions/Lambda2_Filter_Low_Confidence_Inferences.py))takes the inference data from step 2, and filters only the images that meet the pre-defined threshold.<br>
 
 ### 3.2. Building a State Machine via AWS Step Functions
 
@@ -66,4 +66,3 @@ The project aims to develop an image classification Machine Learning Model using
 
 <br>
 
-Thank you for taking the time to visit this repository!
